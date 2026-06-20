@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+(\.(rc|pr-[0-9]+))?(\.[0-9]+\.[0-9a-f]{16})?$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+  a { text-decoration: none; color: inherit; }
+</style>
+</helmet>
+
+<div ref="{{ setRoot }}" style="background:#FAFAF8; color:#1A1A1E; font-family:'Schibsted Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; min-height:100vh; overflow-x:hidden;">
+
+  <!-- NAV -->
+  <header style="position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.6) blur(12px); background:rgba(250,250,248,0.78); border-bottom:1px solid #ECECE6;">
+    <nav style="max-width:920px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; gap:18px;">
+      <a href="Лендинг.dc.html" style="display:inline-flex; align-items:center; gap:8px; font-size:14px; color:#55555C;">
+        <span style="font-family:'JetBrains Mono',monospace;">←</span>
+        <span data-en="All work">Все кейсы</span>
+      </a>
+      <div style="flex:1;"></div>
+      <div style="display:flex; align-items:center; gap:2px; padding:3px; background:#F0F0EB; border-radius:9px; border:1px solid #E6E6DF;">
+        <button id="lang-ru" onClick="{{ langRu }}" style="font-family:'JetBrains Mono',monospace; font-size:12px; padding:5px 10px; border:none; border-radius:6px; cursor:pointer; background:#fff; color:#1A1A1E; box-shadow:0 1px 2px rgba(0,0,0,0.06);">RU</button>
+        <button id="lang-en" onClick="{{ langEn }}" style="font-family:'JetBrains Mono',monospace; font-size:12px; padding:5px 10px; border:none; border-radius:6px; cursor:pointer; background:transparent; color:#9A9AA0;">EN</button>
+      </div>
+      <a href="https://t.me/coffinv" target="_blank" style="display:inline-flex; align-items:center; gap:7px; font-size:14px; font-weight:500; padding:9px 16px; background:#1A1A1E; color:#fff; border-radius:9px; white-space:nowrap;">
+        <span data-en="Message me">Написать</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- HEADER -->
+  <section style="max-width:920px; margin:0 auto; padding:clamp(48px,8vw,88px) 24px clamp(32px,5vw,48px);">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:22px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3A3A40; padding:5px 11px; background:#fff; border:1px solid #E8E8E2; border-radius:7px;" data-en="Hobby project">Сайт-хобби</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3A3A40; padding:5px 11px; background:#fff; border:1px solid #E8E8E2; border-radius:7px;">React</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3A3A40; padding:5px 11px; background:#fff; border:1px solid #E8E8E2; border-radius:7px;" data-en="Interactive">Интерактив</span>
+    </div>
+    <h1 style="font-size:clamp(34px,5.4vw,60px); line-height:1.04; letter-spacing:-0.035em; font-weight:600; margin:0 0 20px; max-width:16ch;">PixelWallMillion</h1>
+    <p style="font-size:clamp(17px,2.1vw,21px); line-height:1.55; color:#55555C; max-width:54ch; margin:0;" data-en="A wall of a million pixels you can buy for ads — place a logo, link or meme and stay there forever. A hobby project built to launch and grow on social media.">Стена из миллиона пикселей, которые можно купить под рекламу — разместить логотип, ссылку или мем и остаться там навсегда. Сайт-хобби, созданный для запуска и продвижения в соцсетях.</p>
+  </section>
+
+  <!-- HERO SHOT -->
+  <section style="max-width:1120px; margin:0 auto; padding:0 24px clamp(40px,6vw,72px);">
+    <div style="border-radius:22px; overflow:hidden; border:1px solid #ECECE6; background:#fff;">
+      <img src="assets/pixel-hero.png" alt="PixelWallMillion — главный экран" style="display:block; width:100%; aspect-ratio:16/9; object-fit:cover;">
+    </div>
+  </section>
+
+  <!-- META + BODY -->
+  <section style="max-width:920px; margin:0 auto; padding:0 24px clamp(64px,9vw,112px);">
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1px; background:#ECECE6; border:1px solid #ECECE6; border-radius:16px; overflow:hidden; margin-bottom:clamp(48px,7vw,80px);">
+      <div style="background:#fff; padding:22px 24px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#9A9AA0; margin-bottom:8px;" data-en="Role">Роль</div>
+        <div style="font-size:15px; font-weight:500;" data-en="Design & development">Дизайн и разработка</div>
+      </div>
+      <div style="background:#fff; padding:22px 24px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#9A9AA0; margin-bottom:8px;" data-en="Timeline">Сроки</div>
+        <div style="font-size:15px; font-weight:500;" data-en="Solo, end-to-end">Соло, под ключ</div>
+      </div>
+      <div style="background:#fff; padding:22px 24px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#9A9AA0; margin-bottom:8px;" data-en="Stack">Стек</div>
+        <div style="font-size:15px; font-weight:500;">React · Node</div>
+      </div>
+      <div style="background:#fff; padding:22px 24px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#9A9AA0; margin-bottom:8px;" data-en="Live">Сайт</div>
+        <a href="https://pixelwallmillion.ru" target="_blank" style="font-size:15px; font-weight:500; color:#2B59E0;">pixelwallmillion.ru ↗</a>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:clamp(40px,6vw,64px);">
+
+      <div>
+        <h2 style="font-size:clamp(22px,3vw,30px); font-weight:600; letter-spacing:-0.02em; margin:0 0 16px;" data-en="The task">Задача</h2>
+        <p style="font-size:17.5px; line-height:1.65; color:#444; margin:0; max-width:62ch;" data-en="Revive the 'million dollar homepage' idea in a modern form: a wall of a million pixels where brands and people buy space for a logo, link or meme — a viral, self-sustaining ad surface.">Возродить идею «million dollar homepage» в современном виде: стена из миллиона пикселей, где бренды и люди выкупают место под логотип, ссылку или мем — вирусная, самоокупаемая рекламная площадка.</p>
+      </div>
+
+      <div>
+        <h2 style="font-size:clamp(22px,3vw,30px); font-weight:600; letter-spacing:-0.02em; margin:0 0 16px;" data-en="The solution">Решение</h2>
+        <p style="font-size:17.5px; line-height:1.65; color:#444; margin:0 0 24px; max-width:62ch;" data-en="An interactive pixel grid with cell purchase, a 'brand wall' of 288 slots, tiered packages (Start / Hit / Legend) and a resale system with a 10% commission. Bold neon retro look and a live counter of taken pixels. Promotion planned via AI-generated clips on Instagram, TikTok and other socials.">Интерактивная пиксельная сетка с покупкой ячеек, «стена брендов» на 288 слотов, пакеты (Старт / Хит / Легенда) и система перепродажи с комиссией 10%. Яркий неоновый ретро-стиль и живой счётчик занятых пикселей. Продвижение запланировано через AI-ролики в Instagram, TikTok и других соцсетях.</p>
+        <div style="border-radius:18px; overflow:hidden; border:1px solid #ECECE6; background:#fff;">
+          <img src="assets/pixel-pricing.png" alt="PixelWallMillion — пакеты" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover;">
+        </div>
+      </div>
+
+      <div>
+        <h2 style="font-size:clamp(22px,3vw,30px); font-weight:600; letter-spacing:-0.02em; margin:0 0 16px;" data-en="The result">Результат</h2>
+        <p style="font-size:17.5px; line-height:1.65; color:#444; margin:0; max-width:62ch;" data-en="A finished, working site with its own visual identity — ready to launch and promote. Built solo, end to end: design, frontend and logic.">Готовый рабочий сайт с собственным визуальным стилем — готов к запуску и продвижению. Сделан соло, от и до: дизайн, фронтенд и логика.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEXT / CTA -->
+  <section style="max-width:920px; margin:0 auto; padding:0 24px clamp(72px,9vw,112px);">
+    <div style="border-top:1px solid #ECECE6; padding-top:clamp(40px,6vw,56px); display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:#9A9AA0; margin-bottom:10px;" data-en="Next case">Следующий кейс</div>
+        <a href="Кейс 2.dc.html" style="font-size:clamp(24px,3.5vw,34px); font-weight:600; letter-spacing:-0.02em; color:#1A1A1E;">Paira →</a>
+      </div>
+      <a href="https://t.me/coffinv" target="_blank" style="display:inline-flex; align-items:center; gap:8px; font-size:16px; font-weight:500; padding:14px 24px; background:#2B59E0; color:#fff; border-radius:11px;">
+        <span data-en="Start a project">Заказать проект</span>
+        <span style="font-family:'JetBrains Mono',monospace;">→</span>
+      </a>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.lang = 'ru';
+    if (this.root) {
+      this.root.querySelectorAll('[data-en]').forEach(el => {
+        if (el.getAttribute('data-ru') == null) el.setAttribute('data-ru', el.textContent);
+      });
+    }
+  }
+  setLang(lang) {
+    if (!this.root || this.lang === lang) return;
+    this.lang = lang;
+    this.root.querySelectorAll('[data-en]').forEach(el => {
+      const v = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-ru');
+      if (v != null) el.textContent = v;
+    });
+    const ru = this.root.querySelector('#lang-ru');
+    const en = this.root.querySelector('#lang-en');
+    [[ru, 'ru'], [en, 'en']].forEach(([b, l]) => {
+      if (!b) return;
+      const active = l === lang;
+      b.style.background = active ? '#fff' : 'transparent';
+      b.style.color = active ? '#1A1A1E' : '#9A9AA0';
+      b.style.boxShadow = active ? '0 1px 2px rgba(0,0,0,0.06)' : 'none';
+    });
+  }
+  renderVals() {
+    return {
+      setRoot: (el) => { this.root = el; },
+      langRu: () => this.setLang('ru'),
+      langEn: () => this.setLang('en'),
+    };
+  }
+}
+</script>
+</body>
+</html>

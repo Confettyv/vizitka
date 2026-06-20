@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+(\.(rc|pr-[0-9]+))?(\.[0-9]+\.[0-9a-f]{16})?$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+  @keyframes slpulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.35); opacity: 0.55; } }
+  @keyframes slrise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  a { text-decoration: none; color: inherit; }
+</style>
+</helmet>
+
+<div ref="{{ setRoot }}" style="background:#FAFAF8; color:#1A1A1E; font-family:'Schibsted Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; min-height:100vh; overflow-x:hidden;">
+
+  <!-- NAV -->
+  <header ref="{{ setHeader }}" style="position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.6) blur(12px); background:rgba(250,250,248,0.78); border-bottom:1px solid #ECECE6; transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);">
+    <nav style="max-width:1120px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; gap:24px;">
+      <a href="#top" style="display:flex; align-items:center; gap:10px; font-weight:600; font-size:17px; letter-spacing:-0.01em;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:8px; background:#1A1A1E; color:#fff; font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:500;">A</span>
+        <span>Алим</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:400; color:#9A9AA0; padding:4px 9px; background:#F0F0EB; border:1px solid #E6E6DF; border-radius:7px; white-space:nowrap;">&lt;/&gt; fullstack dev</span>
+      </a>
+      <div style="flex:1;"></div>
+      <div style="display:flex; align-items:center; gap:30px; font-size:15px; color:#55555C;">
+        <a href="#services" style="display:none;" data-navlink="1" data-en="Services">Услуги</a>
+        <a href="#work" style="display:none;" data-navlink="1" data-en="Work">Кейсы</a>
+        <a href="#pricing" style="display:none;" data-navlink="1" data-en="Pricing">Цены</a>
+      </div>
+      <div style="display:flex; align-items:center; gap:2px; padding:3px; background:#F0F0EB; border-radius:9px; border:1px solid #E6E6DF;">
+        <button id="lang-ru" onClick="{{ langRu }}" style="font-family:'JetBrains Mono',monospace; font-size:12px; padding:5px 10px; border:none; border-radius:6px; cursor:pointer; background:#fff; color:#1A1A1E; box-shadow:0 1px 2px rgba(0,0,0,0.06);">RU</button>
+        <button id="lang-en" onClick="{{ langEn }}" style="font-family:'JetBrains Mono',monospace; font-size:12px; padding:5px 10px; border:none; border-radius:6px; cursor:pointer; background:transparent; color:#9A9AA0;">EN</button>
+      </div>
+      <a href="https://t.me/coffinv" target="_blank" style="display:inline-flex; align-items:center; gap:7px; font-size:14px; font-weight:500; padding:9px 16px; background:#1A1A1E; color:#fff; border-radius:9px; white-space:nowrap;">
+        <span data-en="Message me">Написать</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" style="max-width:1120px; margin:0 auto; padding:clamp(64px,10vw,120px) 24px clamp(48px,7vw,88px);">
+    <div style="display:inline-flex; align-items:center; gap:9px; padding:6px 13px; border:1px solid #E2E2DA; border-radius:100px; background:#fff; margin-bottom:28px; animation:slrise 0.5s ease both;">
+      <span style="position:relative; display:inline-flex; width:8px; height:8px;">
+        <span style="position:absolute; inset:0; border-radius:50%; background:#2BB36B; animation:slpulse 2s ease-in-out infinite;"></span>
+      </span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.04em; color:#3A3A40; white-space:nowrap;" data-en="Open for new projects">Открыт для заказов</span>
+    </div>
+    <h1 style="font-size:clamp(40px,6.2vw,76px); line-height:1.03; letter-spacing:-0.035em; font-weight:600; margin:0 0 26px; max-width:15ch; animation:slrise 0.6s ease both 0.05s;">
+      <span style="display:block;" data-en="I turn ideas into finished products.">Превращаю идеи в готовые продукты.</span>
+      <span style="display:block; color:#2B59E0;" data-en="Fast.">Быстро.</span>
+    </h1>
+    <p style="font-size:clamp(17px,2.1vw,21px); line-height:1.55; color:#55555C; max-width:54ch; margin:0 0 36px; animation:slrise 0.6s ease both 0.12s;" data-en="Fullstack developer. Websites, AI ad videos, Telegram & Discord bots — from idea to launch in days, not months.">Fullstack-разработчик. Сайты, AI рекламные видео, Telegram и Discord боты — от идеи до запуска за дни, а не месяцы.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:12px; animation:slrise 0.6s ease both 0.18s;">
+      <a href="https://t.me/coffinv" target="_blank" style="display:inline-flex; align-items:center; gap:8px; font-size:16px; font-weight:500; padding:14px 24px; background:#2B59E0; color:#fff; border-radius:11px; box-shadow:0 6px 18px -6px rgba(43,89,224,0.5);">
+        <span data-en="Discuss your project">Обсудить проект</span>
+        <span style="font-family:'JetBrains Mono',monospace;">→</span>
+      </a>
+      <a href="#work" style="display:inline-flex; align-items:center; gap:8px; font-size:16px; font-weight:500; padding:14px 24px; background:#fff; color:#1A1A1E; border:1px solid #E2E2DA; border-radius:11px;">
+        <span data-en="See my work">Смотреть кейсы</span>
+      </a>
+    </div>
+
+    <!-- stack strip -->
+    <div style="margin-top:clamp(48px,6vw,72px); padding-top:28px; border-top:1px solid #ECECE6; display:flex; flex-wrap:wrap; align-items:center; gap:10px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#9A9AA0; margin-right:6px;" data-en="Stack">Стек</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#3A3A40; padding:6px 12px; background:#fff; border:1px solid #E8E8E2; border-radius:8px;">React</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#3A3A40; padding:6px 12px; background:#fff; border:1px solid #E8E8E2; border-radius:8px;">Node.js</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#3A3A40; padding:6px 12px; background:#fff; border:1px solid #E8E8E2; border-radius:8px;">Python</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#3A3A40; padding:6px 12px; background:#fff; border:1px solid #E8E8E2; border-radius:8px;">PostgreSQL</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#3A3A40; padding:6px 12px; background:#fff; border:1px solid #E8E8E2; border-radius:8px;">Telegram API</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#3A3A40; padding:6px 12px; background:#fff; border:1px solid #E8E8E2; border-radius:8px;">discord.js</span>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vw,96px) 24px;">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:44px; flex-wrap:wrap;">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#2B59E0; margin-bottom:14px;" data-en="What I build">Что я делаю</div>
+        <h2 style="font-size:clamp(28px,4vw,46px); line-height:1.08; letter-spacing:-0.03em; font-weight:600; margin:0; max-width:18ch;" data-en="Four ways to ship your idea">Четыре способа запустить вашу идею</h2>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;">
+
+      <div style="background:#fff; border:1px solid #ECECE6; border-radius:18px; padding:30px 28px 34px; display:flex; flex-direction:column; gap:14px;" style-hover="border-color:#D6D6CE; box-shadow:0 12px 30px -16px rgba(0,0,0,0.12); transform:translateY(-3px);">
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#B8B8B0;">01</span>
+          <span style="width:42px; height:42px; border-radius:11px; background:#EEF2FE; display:flex; align-items:center; justify-content:center; font-size:20px;">◴</span>
+        </div>
+        <h3 style="font-size:21px; font-weight:600; letter-spacing:-0.02em; margin:6px 0 0;" data-en="Websites">Сайты</h3>
+        <p style="font-size:15px; line-height:1.55; color:#6B6B73; margin:0;" data-en="Landing pages, multi-page sites and web apps. Responsive, fast, deployed and ready to work.">Лендинги, многостраничники и веб-приложения. Адаптив, скорость, деплой — сразу готово к работе.</p>
+      </div>
+
+      <div style="background:#fff; border:1px solid #ECECE6; border-radius:18px; padding:30px 28px 34px; display:flex; flex-direction:column; gap:14px;" style-hover="border-color:#D6D6CE; box-shadow:0 12px 30px -16px rgba(0,0,0,0.12); transform:translateY(-3px);">
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#B8B8B0;">02</span>
+          <span style="width:42px; height:42px; border-radius:11px; background:#EEF2FE; display:flex; align-items:center; justify-content:center; font-size:20px;">▷</span>
+        </div>
+        <h3 style="font-size:21px; font-weight:600; letter-spacing:-0.02em; margin:6px 0 0;" data-en="AI ad videos">AI рекламные видео</h3>
+        <p style="font-size:15px; line-height:1.55; color:#6B6B73; margin:0;" data-en="Short AI-generated clips for ads and social media — scripted, generated and edited to grab attention.">Короткие ролики для рекламы и соцсетей, сгенерированные ИИ — сценарий, генерация и монтаж под внимание зрителя.</p>
+      </div>
+
+      <div style="background:#fff; border:1px solid #ECECE6; border-radius:18px; padding:30px 28px 34px; display:flex; flex-direction:column; gap:14px;" style-hover="border-color:#D6D6CE; box-shadow:0 12px 30px -16px rgba(0,0,0,0.12); transform:translateY(-3px);">
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#B8B8B0;">03</span>
+          <span style="width:42px; height:42px; border-radius:11px; background:#EEF2FE; display:flex; align-items:center; justify-content:center; font-size:20px;">✈</span>
+        </div>
+        <h3 style="font-size:21px; font-weight:600; letter-spacing:-0.02em; margin:6px 0 0;" data-en="Telegram bots">Telegram-боты</h3>
+        <p style="font-size:15px; line-height:1.55; color:#6B6B73; margin:0;" data-en="Bots for business: lead capture, payments, broadcasts and automation that runs while you sleep.">Боты для бизнеса: приём заявок, оплаты, рассылки и автоматизация, которая работает без вас.</p>
+      </div>
+
+      <div style="background:#fff; border:1px solid #ECECE6; border-radius:18px; padding:30px 28px 34px; display:flex; flex-direction:column; gap:14px;" style-hover="border-color:#D6D6CE; box-shadow:0 12px 30px -16px rgba(0,0,0,0.12); transform:translateY(-3px);">
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#B8B8B0;">04</span>
+          <span style="width:42px; height:42px; border-radius:11px; background:#EEF2FE; display:flex; align-items:center; justify-content:center; font-size:20px;">◆</span>
+        </div>
+        <h3 style="font-size:21px; font-weight:600; letter-spacing:-0.02em; margin:6px 0 0;" data-en="Discord bots">Discord-боты</h3>
+        <p style="font-size:15px; line-height:1.55; color:#6B6B73; margin:0;" data-en="Moderation, roles, integrations and custom commands that keep your community alive and organised.">Модерация, роли, интеграции и кастомные команды, которые держат ваше сообщество живым и в порядке.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPEED -->
+  <section style="background:#101014; color:#F4F4F2; margin-top:clamp(40px,6vw,72px);">
+    <div style="max-width:1120px; margin:0 auto; padding:clamp(64px,9vw,112px) 24px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#6E8BFF; margin-bottom:16px;" data-en="Why fast">Почему быстро</div>
+      <h2 style="font-size:clamp(28px,4.4vw,50px); line-height:1.06; letter-spacing:-0.03em; font-weight:600; margin:0 0 18px; max-width:20ch;" data-en="Speed isn't cutting corners. It's a way of working.">Скорость — это не «на коленке». Это способ работать.</h2>
+      <p style="font-size:18px; line-height:1.6; color:#A0A0A8; max-width:58ch; margin:0 0 56px;" data-en="No bloated agency pipeline, no managers between us. You talk to the person who actually writes the code.">Никакого раздутого агентского конвейера и менеджеров между нами. Вы общаетесь напрямую с тем, кто пишет код.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1px; background:#26262C; border:1px solid #26262C; border-radius:16px; overflow:hidden;">
+        <div style="background:#101014; padding:32px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#6E8BFF; margin-bottom:12px;">01</div>
+          <h3 style="font-size:19px; font-weight:600; margin:0 0 8px; letter-spacing:-0.01em;" data-en="AI as an accelerator">Нейросети как ускоритель</h3>
+          <p style="font-size:14.5px; line-height:1.55; color:#9A9AA2; margin:0;" data-en="I use AI to move faster — but never blindly. The architecture, logic and final code are mine, reviewed and tested.">Использую нейросети, чтобы работать быстрее — но не полагаюсь на них вслепую. Архитектуру, логику и финальный код контролирую и тестирую сам.</p>
+        </div>
+        <div style="background:#101014; padding:32px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#6E8BFF; margin-bottom:12px;">02</div>
+          <h3 style="font-size:19px; font-weight:600; margin:0 0 8px; letter-spacing:-0.01em;" data-en="Direct communication">Прямая связь</h3>
+          <p style="font-size:14.5px; line-height:1.55; color:#9A9AA2; margin:0;" data-en="One person, fast replies, decisions made in minutes — not in three meetings.">Один человек, быстрые ответы, решения за минуты — а не за три созвона.</p>
+        </div>
+        <div style="background:#101014; padding:32px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#6E8BFF; margin-bottom:12px;">03</div>
+          <h3 style="font-size:19px; font-weight:600; margin:0 0 8px; letter-spacing:-0.01em;" data-en="From idea to deploy">От идеи до деплоя</h3>
+          <p style="font-size:14.5px; line-height:1.55; color:#9A9AA2; margin:0;" data-en="You get a working product live on a real domain — not a folder of files.">Вы получаете рабочий продукт на реальном домене — а не папку с файлами.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" style="max-width:1120px; margin:0 auto; padding:clamp(64px,9vw,112px) 24px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#2B59E0; margin-bottom:14px;" data-en="Selected work">Избранные работы</div>
+    <h2 style="font-size:clamp(28px,4vw,46px); line-height:1.08; letter-spacing:-0.03em; font-weight:600; margin:0 0 14px; max-width:22ch;" data-en="Don't take my word for it — look.">Не верьте на слово — посмотрите сами.</h2>
+    <p style="font-size:17px; line-height:1.55; color:#6B6B73; max-width:52ch; margin:0 0 48px;" data-en="Two complete, polished sites I designed and built end-to-end.">Два полноценных качественных сайта, которые я спроектировал и собрал от начала до конца.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px;">
+
+      <a href="Кейс 1.dc.html" style="display:flex; flex-direction:column; gap:18px; group;" style-hover="">
+        <div style="border-radius:18px; overflow:hidden; border:1px solid #ECECE6; background:#fff;">
+          <img src="assets/pixel-hero.png" alt="PixelWallMillion" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover;">
+        </div>
+        <div>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3A3A40; padding:4px 10px; background:#F0F0EB; border-radius:6px;" data-en="Web app">Сайт</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3A3A40; padding:4px 10px; background:#F0F0EB; border-radius:6px;">React</span>
+          </div>
+          <h3 style="font-size:23px; font-weight:600; letter-spacing:-0.02em; margin:0 0 6px;" data-en="PixelWallMillion">PixelWallMillion</h3>
+          <p style="font-size:15px; line-height:1.5; color:#6B6B73; margin:0 0 12px;" data-en="An interactive wall of a million pixels you can buy for ads — logos, links, memes. A hobby project built for launch and promotion through AI clips.">Интерактивная стена из миллиона пикселей под рекламу — логотипы, ссылки, мемы. Сайт-хобби, готовый к запуску и продвижению через AI-ролики.</p>
+          <span style="display:inline-flex; align-items:center; gap:6px; font-size:15px; font-weight:500; color:#2B59E0;"><span data-en="View case">Смотреть кейс</span> <span style="font-family:'JetBrains Mono',monospace;">→</span></span>
+        </div>
+      </a>
+
+      <a href="Кейс 2.dc.html" style="display:flex; flex-direction:column; gap:18px;">
+        <div style="border-radius:18px; overflow:hidden; border:1px solid #ECECE6; background:#fff;">
+          <img src="assets/paira-overview.png" alt="Paira" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; object-position:center top;">
+        </div>
+        <p style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#9A9AA0; margin:-8px 0 0;" data-en="Profiles shown are demo cards.">Профили на фото — демо-карточки.</p>
+        <div>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3A3A40; padding:4px 10px; background:#F0F0EB; border-radius:6px;" data-en="Web app">Веб-приложение</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3A3A40; padding:4px 10px; background:#F0F0EB; border-radius:6px;">Fullstack</span>
+          </div>
+          <h3 style="font-size:23px; font-weight:600; letter-spacing:-0.02em; margin:0 0 6px;" data-en="Paira">Paira</h3>
+          <p style="font-size:15px; line-height:1.5; color:#6B6B73; margin:0 0 12px;" data-en="A full multi-page dating service with a solid backend: swipe feed, profiles, matches, chats and moderation. Compatibility match by interests, goals and city.">Полноценный многостраничный сервис знакомств с прочным backend: лента-свайпы, профили, пары, чаты, модерация. Мэтчинг по интересам, целям и городу.</p>
+          <span style="display:inline-flex; align-items:center; gap:6px; font-size:15px; font-weight:500; color:#2B59E0;"><span data-en="View case">Смотреть кейс</span> <span style="font-family:'JetBrains Mono',monospace;">→</span></span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" style="max-width:1120px; margin:0 auto; padding:clamp(40px,6vw,72px) 24px clamp(64px,9vw,112px);">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:#2B59E0; margin-bottom:14px;" data-en="Pricing">Цены</div>
+    <h2 style="font-size:clamp(28px,4vw,46px); line-height:1.08; letter-spacing:-0.03em; font-weight:600; margin:0 0 14px; max-width:20ch;" data-en="Transparent starting prices">Прозрачные стартовые цены</h2>
+    <p style="font-size:17px; line-height:1.55; color:#6B6B73; max-width:52ch; margin:0 0 44px;" data-en="Final cost depends on scope — we'll agree on it after a short chat. No surprises.">Финальная стоимость зависит от объёма — обсудим её после короткого разговора. Без сюрпризов.</p>
+
+    <div style="background:#fff; border:1px solid #ECECE6; border-radius:18px; overflow:hidden;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px 28px; border-bottom:1px solid #F0F0EB; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#B8B8B0; width:26px;">01</span>
+          <span style="font-size:18px; font-weight:600; letter-spacing:-0.01em;" data-en="Landing page">Лендинг</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:22px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:16px; color:#1A1A1E;"><span style="color:#9A9AA0; font-size:13px;" data-en="from">от</span> 10 000 ₽</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px 28px; border-bottom:1px solid #F0F0EB; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#B8B8B0; width:26px;">02</span>
+          <span style="font-size:18px; font-weight:600; letter-spacing:-0.01em;" data-en="Web app / multi-page site">Веб-приложение / многостраничник</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:22px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:16px; color:#1A1A1E;"><span style="color:#9A9AA0; font-size:13px;" data-en="from">от</span> 30 000 ₽</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px 28px; border-bottom:1px solid #F0F0EB; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#B8B8B0; width:26px;">03</span>
+          <span style="font-size:18px; font-weight:600; letter-spacing:-0.01em;" data-en="Telegram / Discord bot">Telegram / Discord бот</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:22px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:16px; color:#1A1A1E;"><span style="color:#9A9AA0; font-size:13px;" data-en="from">от</span> 7 500 ₽</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px 28px; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#B8B8B0; width:26px;">04</span>
+          <span style="font-size:18px; font-weight:600; letter-spacing:-0.01em;" data-en="AI ad video">AI рекламное видео</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:22px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:16px; color:#1A1A1E;"><span style="color:#9A9AA0; font-size:13px;" data-en="from">от</span> 4 000 ₽</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="max-width:1120px; margin:0 auto 0; padding:0 24px clamp(72px,9vw,120px);">
+    <div style="background:#2B59E0; color:#fff; border-radius:24px; padding:clamp(40px,6vw,72px); position:relative; overflow:hidden;">
+      <div style="position:absolute; right:-80px; top:-80px; width:280px; height:280px; border-radius:50%; background:rgba(255,255,255,0.08);"></div>
+      <div style="position:relative;">
+        <h2 style="font-size:clamp(28px,4.4vw,50px); line-height:1.05; letter-spacing:-0.03em; font-weight:600; margin:0 0 18px; max-width:18ch;" data-en="Got an idea? Let's ship it.">Есть идея? Давайте запустим.</h2>
+        <p style="font-size:18px; line-height:1.55; color:rgba(255,255,255,0.82); max-width:48ch; margin:0 0 36px;" data-en="Tell me about your task — I reply fast and tell you honestly what's possible and how soon.">Расскажите про задачу — отвечу быстро и честно скажу, что реально сделать и в какие сроки.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+          <a href="https://t.me/coffinv" target="_blank" style="display:inline-flex; align-items:center; gap:8px; font-size:16px; font-weight:600; padding:14px 24px; background:#fff; color:#2B59E0; border-radius:11px;">
+            <span>Telegram</span><span style="font-family:'JetBrains Mono',monospace; font-weight:400;">@coffinv</span>
+          </a>
+          <a id="email-cta" href="#" data-user="miroxby" data-domain="gmail.com" style="display:inline-flex; align-items:center; gap:8px; font-size:16px; font-weight:500; padding:14px 24px; background:rgba(255,255,255,0.14); color:#fff; border:1px solid rgba(255,255,255,0.25); border-radius:11px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-weight:400;"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top:1px solid #ECECE6;">
+    <div style="max-width:1120px; margin:0 auto; padding:36px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:10px; font-weight:600;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; border-radius:7px; background:#1A1A1E; color:#fff; font-family:'JetBrains Mono',monospace; font-size:13px;">A</span>
+        <span>Алим</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#9A9AA0; margin-left:8px;">Fullstack</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:24px; font-size:14px; color:#6B6B73; font-family:'JetBrains Mono',monospace;">
+        <a href="https://t.me/coffinv" target="_blank" style="color:#6B6B73;" style-hover="color:#1A1A1E;">Telegram</a>
+        <a href="https://github.com/Confettyv" target="_blank" style="color:#6B6B73;" style-hover="color:#1A1A1E;">GitHub</a>
+        <a id="email-foot" href="#" data-user="miroxby" data-domain="gmail.com" style="color:#6B6B73;" style-hover="color:#1A1A1E;">Email</a>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#B8B8B0;">© 2026</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.lang = 'ru';
+    this._lastY = window.scrollY;
+    this._onScroll = () => {
+      if (!this.header) return;
+      const y = window.scrollY;
+      const goingDown = y > this._lastY;
+      const h = this.header.offsetHeight || 70;
+      if (y < 80) {
+        this.header.style.transform = 'translateY(0)';
+      } else if (goingDown && y - this._lastY > 4) {
+        this.header.style.transform = 'translateY(-' + (h + 4) + 'px)';
+      } else if (!goingDown && this._lastY - y > 4) {
+        this.header.style.transform = 'translateY(0)';
+      }
+      this._lastY = y;
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    if (this.root) {
+      // reveal nav links once mounted (kept display:none during stream to avoid flash)
+      this.root.querySelectorAll('[data-navlink]').forEach(el => { el.style.display = 'inline'; });
+      // assemble email from parts so the preview's anti-bot filter doesn't mangle it
+      this.root.querySelectorAll('a[data-user][data-domain]').forEach(a => {
+        const addr = a.getAttribute('data-user') + '@' + a.getAttribute('data-domain');
+        a.setAttribute('href', 'mailto:' + addr);
+        const span = a.querySelector('span');
+        if (span) span.textContent = addr;
+      });
+      // capture Russian originals
+      this.root.querySelectorAll('[data-en]').forEach(el => {
+        if (el.getAttribute('data-ru') == null) el.setAttribute('data-ru', el.textContent);
+      });
+    }
+  }
+
+  setLang(lang) {
+    if (!this.root || this.lang === lang) return;
+    this.lang = lang;
+    this.root.querySelectorAll('[data-en]').forEach(el => {
+      const v = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-ru');
+      if (v != null) el.textContent = v;
+    });
+    const ru = this.root.querySelector('#lang-ru');
+    const en = this.root.querySelector('#lang-en');
+    [[ru, 'ru'], [en, 'en']].forEach(([b, l]) => {
+      if (!b) return;
+      const active = l === lang;
+      b.style.background = active ? '#fff' : 'transparent';
+      b.style.color = active ? '#1A1A1E' : '#9A9AA0';
+      b.style.boxShadow = active ? '0 1px 2px rgba(0,0,0,0.06)' : 'none';
+    });
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+  }
+
+  renderVals() {
+    return {
+      setRoot: (el) => { this.root = el; },
+      setHeader: (el) => { this.header = el; },
+      langRu: () => this.setLang('ru'),
+      langEn: () => this.setLang('en'),
+    };
+  }
+}
+</script>
+</body>
+</html>
