@@ -246,8 +246,8 @@ export const cases: Record<
       alt: { ru: 'Схема интеграций бота', en: "Bot's integration flow" },
     },
     result: {
-      ru: 'Рабочий бот, который реально шлёт брифинг каждое утро. Для меня это была практика по внешним API и расписанию — то, что напрямую переносится в коммерческих ботов и автоматизацию.',
-      en: 'A working bot that genuinely sends the briefing every morning. For me it was hands-on practice with external APIs and scheduling — directly transferable to commercial bots and automation.',
+      ru: 'Рабочий бот, который реально шлёт брифинг каждое утро. Для меня это была практика по внешним API и расписанию — то, что напрямую переносится в коммерческих ботов и автоматизацию. Изначально метил шире — пробки и транспорт, — но сознательно сузил скоуп до бесплатных стабильных API: надёжная погода и напоминания вместо фич «на честном слове».',
+      en: "A working bot that genuinely sends the briefing every morning. For me it was hands-on practice with external APIs and scheduling — directly transferable to commercial bots and automation. I originally aimed wider — traffic and transit — but deliberately narrowed the scope to free, reliable APIs: solid weather and reminders over half-working features.",
     },
     next: { title: 'PixelWallMillion', to: '/case/pixelwallmillion' },
   },
