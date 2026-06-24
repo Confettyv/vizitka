@@ -128,6 +128,20 @@ const work: {
       'A parody landing for a "corporate cult" around a cat: a treat-fund counter, a manifesto and an adept sign-up form. A gift project, in vanilla JS.',
     ],
   },
+  {
+    to: '/case/secretary',
+    img: '/assets/secretary-hero.jpg',
+    alt: 'Утренний секретарь',
+    tags: [
+      ['Telegram-бот', 'Telegram bot'],
+      ['Python', 'Python'],
+    ],
+    title: 'Утренний секретарь',
+    desc: [
+      'Бот шлёт утренний брифинг: погода по адресу (Яндекс-Геокодер + OpenWeather) и напоминания, по расписанию с таймзоной. aiogram, APScheduler, Docker.',
+      'A bot that sends a morning briefing: weather by address (Yandex Geocoder + OpenWeather) and reminders, on a timezone-aware schedule. aiogram, APScheduler, Docker.',
+    ],
+  },
 ]
 
 const pricing: { n: string; name: Pair; price: string }[] = [
@@ -597,8 +611,8 @@ export default function Landing() {
           }}
         >
           {t(
-            'Три проекта, собранных от начала до конца — два клиентских сайта и один хобби-проект для души.',
-            'Three projects I designed and built end-to-end — two client sites and one hobby project for fun.',
+            'Четыре проекта, собранных от начала до конца — сайты, веб-приложение и Telegram-бот.',
+            'Four projects I designed and built end-to-end — sites, a web app and a Telegram bot.',
           )}
         </p>
 

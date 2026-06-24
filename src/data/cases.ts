@@ -35,7 +35,10 @@ export interface CaseData {
 
 const role: Bilingual = { ru: 'Дизайн и разработка', en: 'Design & development' }
 
-export const cases: Record<'pixelwallmillion' | 'paira' | 'busya', CaseData> = {
+export const cases: Record<
+  'pixelwallmillion' | 'paira' | 'busya' | 'secretary',
+  CaseData
+> = {
   pixelwallmillion: {
     slug: 'pixelwallmillion',
     tags: [
@@ -187,6 +190,64 @@ export const cases: Record<'pixelwallmillion' | 'paira' | 'busya', CaseData> = {
     result: {
       ru: 'Рабочий шуточный сайт с цельным визуальным стилем и живым интерактивом — задеплоен на Cloudflare Pages. Заодно показывает, что я держу тон, детали и аккуратность даже там, где всё несерьёзно.',
       en: 'A working joke site with a coherent visual style and live interactions — deployed on Cloudflare Pages. It also shows I keep the tone, detail and polish even where nothing is serious.',
+    },
+    next: { title: 'Утренний секретарь', to: '/case/secretary' },
+  },
+
+  secretary: {
+    slug: 'secretary',
+    tags: [
+      { ru: 'Telegram-бот', en: 'Telegram bot' },
+      { ru: 'Python', en: 'Python' },
+      { ru: 'Интеграции', en: 'Integrations' },
+    ],
+    title: 'Утренний секретарь',
+    subtitle: {
+      ru: 'Telegram-бот, который каждое утро присылает брифинг: точная погода по адресу и напоминания на день. Пет-проект про реальные интеграции — Яндекс-Геокодер, OpenWeather и рассылку по таймзоне.',
+      en: "A Telegram bot that sends a morning briefing every day: precise weather for your address and the day's reminders. A pet project about real integrations — Yandex Geocoder, OpenWeather and timezone-aware delivery.",
+    },
+    hero: {
+      src: '/assets/secretary-hero.jpg',
+      alt: { ru: 'Утренний брифинг в Telegram', en: 'Morning briefing in Telegram' },
+      caption: {
+        ru: 'Пример утреннего брифинга. Бот — пет-проект, поднимается по запросу.',
+        en: 'Example morning briefing. The bot is a pet project, started on request.',
+      },
+    },
+    meta: [
+      {
+        label: { ru: 'Роль', en: 'Role' },
+        value: { ru: 'Идея и разработка', en: 'Idea & development' },
+      },
+      {
+        label: { ru: 'Сроки', en: 'Timeline' },
+        value: { ru: 'Пет-проект', en: 'Pet project' },
+      },
+      {
+        label: { ru: 'Стек', en: 'Stack' },
+        value: { ru: 'Python · aiogram · APScheduler', en: 'Python · aiogram · APScheduler' },
+      },
+      {
+        label: { ru: 'Бот', en: 'Bot' },
+        value: { ru: '@mornCoffi_bot', en: '@mornCoffi_bot' },
+        href: 'https://t.me/mornCoffi_bot',
+      },
+    ],
+    task: {
+      ru: 'Сделать персонального утреннего ассистента в Telegram: чтобы каждое утро в нужное время приходил короткий брифинг с точной погодой именно по моему адресу и списком дел на день — без ручных запросов.',
+      en: "Build a personal morning assistant in Telegram: every morning, at the right time, a short briefing with precise weather for my exact address and the day's to-dos — no manual lookups.",
+    },
+    solution: {
+      ru: 'Бот на aiogram 3 с персональными настройками (адрес дома/работы, время, таймзона). Адрес геокодится Яндексом в координаты, по ним берётся прогноз OpenWeather; совет «взять зонт» — при вероятности осадков ≥ 65%. Напоминания на день и рассылка по расписанию через APScheduler с учётом таймзоны каждого пользователя. Данные — в async SQLAlchemy + SQLite, всё упаковано в Docker, есть тесты. Без ключей бот не падает, а аккуратно деградирует.',
+      en: 'An aiogram 3 bot with per-user settings (home/work address, time, timezone). The address is geocoded by Yandex into coordinates, then OpenWeather returns the forecast; the "take an umbrella" tip fires at ≥ 65% precipitation chance. Daily reminders and scheduled delivery via APScheduler, timezone-aware per user. State in async SQLAlchemy + SQLite, packaged in Docker, with tests. It degrades gracefully without keys instead of crashing.',
+    },
+    solutionImg: {
+      src: '/assets/secretary-flow.jpg',
+      alt: { ru: 'Схема интеграций бота', en: "Bot's integration flow" },
+    },
+    result: {
+      ru: 'Рабочий бот, который реально шлёт брифинг каждое утро. Для меня это была практика по внешним API и расписанию — то, что напрямую переносится в коммерческих ботов и автоматизацию.',
+      en: 'A working bot that genuinely sends the briefing every morning. For me it was hands-on practice with external APIs and scheduling — directly transferable to commercial bots and automation.',
     },
     next: { title: 'PixelWallMillion', to: '/case/pixelwallmillion' },
   },

@@ -24,6 +24,7 @@ export default function App() {
         />
         <Route path="/case/paira" element={<CasePage data={cases.paira} />} />
         <Route path="/case/busya" element={<CasePage data={cases.busya} />} />
+        <Route path="/case/secretary" element={<CasePage data={cases.secretary} />} />
       </Routes>
     </>
   )
