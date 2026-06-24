@@ -1,0 +1,12 @@
+{
+  // Деплой статического сайта (Vite → dist/) как Worker со статик-ассетами.
+  // CF Workers Build выполняет: npm run build → npx wrangler deploy (читает этот файл).
+  "name": "vizitka",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./dist",
+    // Несуществующие пути (/case/*) отдают index.html — клиентский роутинг SPA.
+    // Реальные файлы (/busya/, /assets/*) отдаются напрямую.
+    "not_found_handling": "single-page-application"
+  }
+}

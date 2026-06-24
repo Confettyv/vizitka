@@ -146,6 +146,33 @@ const pricing: { n: string; name: Pair; price: string }[] = [
   { n: '05', name: ['AI-анимация / ролик', 'AI animation / clip'], price: '4 000 ₽' },
 ]
 
+const education: { tag: Pair; title: Pair; desc: Pair }[] = [
+  {
+    tag: ['Высшее', 'Degree'],
+    title: ['Университет в Москве', 'University in Moscow'],
+    desc: [
+      'Учусь по направлению fullstack-разработки — системная база под то, что делаю каждый день.',
+      'Studying fullstack development at university — a systematic base for what I build every day.',
+    ],
+  },
+  {
+    tag: ['Школа 21 · Сбер', 'School 21 · Sber'],
+    title: ['Прошёл отбор и поступил', 'Passed selection, enrolled'],
+    desc: [
+      'Интенсивная peer-to-peer школа от Сбера: прошёл вступительный отбор и поступил на основное обучение.',
+      "Sber's intensive peer-to-peer school: passed the entry selection and enrolled in the main program.",
+    ],
+  },
+  {
+    tag: ['Профиль', 'Focus'],
+    title: ['Кибербезопасность', 'Cybersecurity'],
+    desc: [
+      'Учусь по направлению кибербезопасности — поэтому к оплатам, данным и доступам отношусь серьёзно.',
+      'Studying cybersecurity — so I take payments, data and access seriously by default.',
+    ],
+  },
+]
+
 const kicker: React.CSSProperties = {
   fontFamily: font.mono,
   fontSize: 13,
@@ -656,6 +683,90 @@ export default function Landing() {
                 </span>
               </div>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section
+        id="about"
+        style={{ maxWidth: 1120, margin: '0 auto', padding: 'clamp(56px,8vw,96px) 24px' }}
+      >
+        <div style={kicker}>{t('Обо мне', 'About me')}</div>
+        <h2
+          style={{
+            fontSize: 'clamp(28px,4vw,46px)',
+            lineHeight: 1.08,
+            letterSpacing: '-0.03em',
+            fontWeight: 600,
+            margin: '0 0 14px',
+            maxWidth: '22ch',
+          }}
+        >
+          {t('За кодом — техническая база и безопасность', 'Behind the code: a real base and security')}
+        </h2>
+        <p
+          style={{
+            fontSize: 17,
+            lineHeight: 1.55,
+            color: c.muted2,
+            maxWidth: '56ch',
+            margin: '0 0 44px',
+          }}
+        >
+          {t(
+            'Я не просто «пишу на нейросетях». У меня системное техническое образование, а профильное направление — кибербезопасность. Для вас это аккуратная работа с оплатами, данными и доступами.',
+            "I'm not just 'coding with AI'. I have a systematic technical education with a focus on cybersecurity. For you that means careful handling of payments, data and access.",
+          )}
+        </p>
+
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))',
+            gap: 16,
+          }}
+        >
+          {education.map((e) => (
+            <div
+              key={e.title[0]}
+              style={{
+                background: c.surface,
+                border: `1px solid ${c.border}`,
+                borderRadius: 18,
+                padding: '28px 26px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 12,
+              }}
+            >
+              <span
+                style={{
+                  alignSelf: 'flex-start',
+                  fontFamily: font.mono,
+                  fontSize: 12,
+                  color: c.accent,
+                  padding: '4px 10px',
+                  background: c.accentBg,
+                  borderRadius: 6,
+                }}
+              >
+                {t(e.tag[0], e.tag[1])}
+              </span>
+              <h3
+                style={{
+                  fontSize: 19,
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em',
+                  margin: '4px 0 0',
+                }}
+              >
+                {t(e.title[0], e.title[1])}
+              </h3>
+              <p style={{ fontSize: 14.5, lineHeight: 1.55, color: c.muted2, margin: 0 }}>
+                {t(e.desc[0], e.desc[1])}
+              </p>
+            </div>
           ))}
         </div>
       </section>

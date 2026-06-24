@@ -120,6 +120,9 @@ export default function Header() {
           <a href="#work" style={navLink}>
             {t('Кейсы', 'Work')}
           </a>
+          <a href="#about" style={navLink}>
+            {t('Обо мне', 'About')}
+          </a>
           <a href="#pricing" style={navLink}>
             {t('Цены', 'Pricing')}
           </a>
