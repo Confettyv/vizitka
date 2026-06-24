@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fafaf8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes slpulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.55;
+  }
+}
+
+@keyframes slrise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover-карточек услуг (style-hover в прототипе) */
+.service-card {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+.service-card:hover {
+  border-color: #d6d6ce;
+  box-shadow: 0 12px 30px -16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+/* Hover-ссылок в футере */
+.foot-link {
+  transition: color 0.2s ease;
+}
+.foot-link:hover {
+  color: #1a1a1e;
+}
+
+/* Навигация в хедере прячется на узких экранах, чтобы не ломать строку */
+@media (max-width: 720px) {
+  .nav-links {
+    display: none !important;
+  }
+}
+
+/* Видимый фокус для доступности */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #2b59e0;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
